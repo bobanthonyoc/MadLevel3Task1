@@ -11,4 +11,9 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rate_the_following_game_from_1_to_5_stars">Rate the following game from 1 to 5 stars!</string>
+    <string name="name_of_the_game">Name of the game</string>
+    <string name="to_summary">to summary</string>
+    <string name="click_start_to_start_rating">Click START to start rating :)</string>
+    <string name="welcome_the_the_games_rating_app">Welcome the the Games Rating App!</string>
 </resources>
