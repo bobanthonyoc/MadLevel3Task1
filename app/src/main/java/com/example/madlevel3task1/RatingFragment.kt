@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_rating.*
 
@@ -14,8 +15,8 @@ import kotlinx.android.synthetic.main.fragment_rating.*
 class RatingFragment : Fragment() {
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_rating, container, false)
@@ -23,13 +24,6 @@ class RatingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        fun showRandomAssessableGame() {
-            val randomGame = listOf("Red Dead Redemption 2", "Rocket League",
-                "Shadow of the Tombraider").random()
-
-            txt_game.text = randomGame
-        }
 
         btn_to_summary.setOnClickListener {
             navigateToSummary()
@@ -45,5 +39,12 @@ class RatingFragment : Fragment() {
         args.putString(ARG_GAME_NAME, txt_game.text.toString())
 
         findNavController().navigate(R.id.action_ratingFragment_to_summaryFragment, args)
+    }
+
+    private fun showRandomAssessableGame() {
+        val randomGame = listOf("Red Dead Redemption 2", "Rocket League",
+            "Shadow of the Tombraider").random()
+
+        txt_game.text = randomGame
     }
 }
